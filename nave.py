@@ -7,11 +7,14 @@ tripulantes = []
 def viajar():
     ##aqui vamos gastar combustível
     global combustivel ##Avisa a função que vamos identificar um variavel externa
-    if(combustivel >= 30):
-        combustivel = combustivel - 30
-        print("A nave viajou")
+    if (len(tripulantes) == 0):
+        print("Não há tripulantes. A viagem não acontecerá! ❌")
     else:
-        print("Você está sem combustível suficiente. Abasteça!")
+        if(combustivel >= 30):
+            combustivel = combustivel - 30
+            print("A nave viajou! 🚀")
+        else:
+            print("Você está sem combustível suficiente. Abasteça!")
 
 def abastecer():
     global combustivel
